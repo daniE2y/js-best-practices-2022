@@ -76,48 +76,118 @@ body {
     font-weight: 800;
 }
 
-@media only screen and (max-width: 1280px) {
-    .dps-welcome-title {
-        font-size: 90px;	
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .dps-normal-color-text {
+        text-align: unset;
     }
-    
-    .dps-welcome-subtitle {
-        font-size: 30px;	
+
+    .dps-better {
+        padding: 0.5rem;
+    }
+
+    .dps-bio {
+        padding: 0.5rem;
+    }
+
+    .dps-row {
+        padding: 0.5rem;
     }
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
     .dps-welcome-title {
-        font-size: 30px;
+        font-size: 70px;
         padding-left: 5rem;	
     }
-    
+
     .dps-welcome-subtitle {
-        font-size: 20px;	
+        font-size: 25px;
+        padding-left: 4rem;
+    }
+
+    .dps-row {
+        padding-bottom: 0rem;
+        
+    }
+
+    .dps-saragossa {
+        visibility: hidden;
     }
 
     .dps-normal-text {
         font-size: 15px;
     }
-}
 
-@media only screen and (max-width: 450px) {
-    .dps-welcome-title {
-        padding-left: 3.5rem;
-        padding-top: 0rem;
+    .dps-saragossa {
+        visibility: visible;
     }
 
     .dps-row {
-        padding: 0;
-        
+        padding: 0.5rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .dps-welcome-title {
+        font-size: 70px;
+        padding-left: 6rem;	
     }
 
-    .dps-hi {
-        padding-left: 3rem;
+    .dps-welcome-subtitle {
+        font-size: 30px;	
+        padding-left: 2rem;
     }
 
     .dps-saragossa {
-        visibility: hidden;
+        visibility: visible;
+    }
+
+    .dps-row {
+        padding: 0.5rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 768px) {
+    .dps-welcome-title {
+        font-size: 90px;
+        padding-left: 3.5rem;	
+    }
+    
+    .dps-welcome-subtitle {
+        font-size: 30px;	
+        padding-left: 3.5rem;
+    }
+
+    .dps-saragossa {
+        visibility: visible;
+    }
+
+    .dps-row {
+        padding: 0.5rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .dps-welcome-title {
+        font-size: 90px;
+        padding-left: 3.5rem;	
+    }
+    
+    .dps-welcome-subtitle {
+        font-size: 30px;	
+        padding-left: 3.5rem;
+    }
+
+    .dps-saragossa {
+        visibility: visible;
+    }
+
+    .dps-row {
+        padding: 0.5rem;
     }
 }
