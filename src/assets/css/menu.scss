@@ -1,0 +1,37 @@
+.dps-menu {
+    flex: 1 1 auto;
+    font-family: "Moderat", sans-serif;
+    padding: 5rem;
+    padding-left: 25rem;
+    display: block;
+}
+
+.dps-menu-element {
+    //padding: 5rem;
+    justify-content: center;
+    font-weight: 500;
+	font-size: 16px;
+	color: #b7cdf7;
+	text-decoration: none;
+
+}
+
+.dps-menu-element:hover {
+    color: #dee7f8;
+}
+
+.dps-menu-pages-blog {
+    flex: 1 1 auto;
+    font-family: "Moderat", sans-serif;
+    padding: 5rem;
+    padding-left: 3rem;
+    display: block;
+}
+
+.dps-menu-pages-socials {
+    flex: 1 1 auto;
+    font-family: "Moderat", sans-serif;
+    padding: 5rem;
+    padding-left: 11rem;
+    display: block;
+}

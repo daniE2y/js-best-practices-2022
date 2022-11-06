@@ -12,6 +12,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "index.html",
     }),
+    new HtmlWebpackPlugin({
+      filename: "blog.html",
+      template: "blog.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "social.html",
+      template: "social.html",
+    }),
   ],
   module: {
     rules: [
@@ -27,8 +35,18 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        test: /\.s[ac]ss$/i,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              // Prefer `dart-sass`
+              implementation: require("sass"),
+            },
+          },
+        ],
       },
       {
         test: /\.(png|jpg|gif)$/i,

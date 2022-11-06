@@ -1,13 +1,29 @@
-import "./assets/css/normalize.css";
+import "./assets/css/welcome.scss";
+import "./assets/css/menu.scss";
 
-import { getUsers } from "./users";
-
-export async function printUsers() {
-  const users = await getUsers();
-  const element = document.createElement("div");
-  element.innerHTML = `<h2>Current users</h2>
-    ${users.map((user) => `<div>${user.name}</div>`).join("")}`;
-  return element;
+export async function createMainElement() {
+  return document.createElement("main");
 }
 
-printUsers().then((element) => document.body.appendChild(element));
+// export async function createNavigationMenu() {
+//   const element = document.createElement("div");
+//   element.setAttribute("class", "dps-menu");
+//   element.innerHTML = `
+//   <nav>
+//     <a class="dps-menu-element" onclick="${router.load(
+//       "personal"
+//     )}">Personal</a>
+//     <a class="dps-menu-element" onclick="${router.load("blog")}">Blog</a>
+//     <a class="dps-menu-element" onclick="${router.load("social")}">Social</a>
+//   </nav>
+//   `;
+//   return element;
+// }
+
+export function buildWebsite() {
+  // createNavigationMenu().then((element) =>
+  //   document.querySelector("main").appendChild(element)
+  // );
+}
+
+buildWebsite();
