@@ -5,7 +5,6 @@
 body {
 	box-sizing: border-box;
 	min-height: 100vh;
-	// width: 100vw;
 	display: flex;
 	align-content: center;
 	justify-content: center;
@@ -18,12 +17,9 @@ body {
 }
 
 .dps-dynamic-span {
-	// --minFontSize: 2rem;
-	// --maxFontSize: calc(var(--minFontSize) * 8);
 	--scaler: 20vw;
 	font-family: "Moderat", sans-serif;
 	font-weight: 900;
-	// font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
 	color: var(--primary);
 	background-image: url("../images/minimal-bck.jpg");
 	background-size: auto 200%;
@@ -90,18 +86,6 @@ body {
     }
 }
 
-// @media only screen and (max-width: 600px) {
-//     .dps-welcome-title {
-//         font-size: 50px;
-//         // padding-left: 7rem;	
-//     }
-    
-//     .dps-welcome-subtitle {
-//         font-size: 20px;	
-//         // padding-left: 7rem;	
-//     }
-// }
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .dps-welcome-title {
@@ -111,10 +95,29 @@ body {
     
     .dps-welcome-subtitle {
         font-size: 20px;	
-        // padding-left: 7rem;	
     }
 
     .dps-normal-text {
         font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .dps-welcome-title {
+        padding-left: 3rem;
+        padding-top: 0rem;
+    }
+
+    .dps-row {
+        padding: 0;
+        
+    }
+
+    .dps-hi {
+        padding-left: 3rem;
+    }
+
+    .dps-saragossa {
+        visibility: hidden;
     }
 }
