@@ -78,6 +78,13 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    .dps-welcome-title {
+        font-size: 40px;
+    }
+
+    .dps-welcome-subtitle {
+        font-size: 25px;
+    }
     .dps-normal-color-text {
         text-align: unset;
     }
