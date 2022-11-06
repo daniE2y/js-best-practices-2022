@@ -13,13 +13,13 @@ body {
 	background: radial-gradient(ellipse at bottom, #568cf1 0%, #243b66 100%);
 }
 
-span {
-	--minFontSize: 2rem;
-	--maxFontSize: calc(var(--minFontSize) * 8);
+.dps-dynamic-span {
+	// --minFontSize: 2rem;
+	// --maxFontSize: calc(var(--minFontSize) * 8);
 	--scaler: 20vw;
 	font-family: "Moderat", sans-serif;
 	font-weight: 900;
-	font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+	// font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
 	color: var(--primary);
 	background-image: url("../images/minimal-bck.jpg");
 	background-size: auto 200%;
@@ -38,16 +38,59 @@ span {
 	}
 }
 
+.dps-welcome-title {
+	font-size: 180px;	
+}
+
 .dps-welcome-subtitle {
 	font-size: 60px;	
 }
 
-.dps-welcome-sb {
-	padding-top: 5rem;
-	padding-left: 15rem;
-}
+// .dps-welcome-sb {
+// 	padding-top: 5rem;
+// 	padding-left: 15px;
+// }
 
 .dps-welcome-pages {
 	padding-top: 0rem;
 	padding-left: 5rem;
+}
+
+@media only screen and (max-width: 1280px) {
+    .dps-welcome-title {
+        font-size: 90px;	
+    }
+    
+    .dps-welcome-subtitle {
+        font-size: 30px;	
+    }
+}
+
+// @media only screen and (max-width: 600px) {
+//     .dps-welcome-title {
+//         font-size: 50px;
+//         // padding-left: 7rem;	
+//     }
+    
+//     .dps-welcome-subtitle {
+//         font-size: 20px;	
+//         // padding-left: 7rem;	
+//     }
+// }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .dps-welcome-title {
+        font-size: 30px;
+        padding-left: 5rem;	
+    }
+    
+    .dps-welcome-subtitle {
+        font-size: 20px;	
+        // padding-left: 7rem;	
+    }
+
+    .dps-normal-text {
+        font-size: 15px;
+    }
 }
