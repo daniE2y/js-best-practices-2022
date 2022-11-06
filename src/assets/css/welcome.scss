@@ -46,14 +46,34 @@ body {
 	font-size: 60px;	
 }
 
-// .dps-welcome-sb {
-// 	padding-top: 5rem;
-// 	padding-left: 15px;
-// }
-
 .dps-welcome-pages {
 	padding-top: 0rem;
 	padding-left: 5rem;
+}
+
+.dps-row {
+    padding: 3rem;
+}
+
+.dps-normal-color-text {
+    --tw-text-opacity: 1;
+    font-family: "Moderat", sans-serif;
+    color: rgba(191, 219, 254, var(--tw-text-opacity));
+    text-align: center;
+}
+
+.dps-bold-color-text {
+    --tw-text-opacity: 1;
+    font-family: "Moderat", sans-serif;
+    color: rgba(239, 246, 255, var(--tw-text-opacity));
+}
+
+.dps-anchor {
+    text-decoration: none;
+}
+
+.font-extrabold {
+    font-weight: 800;
 }
 
 @media only screen and (max-width: 1280px) {
