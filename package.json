@@ -1,5 +1,5 @@
 {
-  "name": "javascript-basic-skeleton",
+  "name": "danisanga.xyz",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -8,10 +8,7 @@
     "build": "webpack --config webpack.prod.js",
     "start": "http-server dist",
     "lint": "eslint --ignore-path .gitignore . --ext .js,.html",
-    "lint:fix": "npm run lint -- --fix",
-    "cy:run": "cypress run",
-    "cy:open": "cypress open",
-    "test": "jest"
+    "lint:fix": "npm run lint -- --fix"
   },
   "keywords": [],
   "author": "",
