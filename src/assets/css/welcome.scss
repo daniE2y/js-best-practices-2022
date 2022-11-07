@@ -17,25 +17,29 @@ body {
 }
 
 .dps-dynamic-span {
-	--scaler: 20vw;
-	font-family: "Moderat", sans-serif;
-	font-weight: 900;
-	color: var(--primary);
-	background-image: url("../images/minimal-bck.jpg");
-	background-size: auto 200%;
-    background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	animation: dps-kframe 5s linear infinite;
+	// --scaler: 20vw;
+	// font-family: "Moderat", sans-serif;
+	// font-weight: 900;
+	// color: var(--primary);
+	// background-image: url("../images/minimal-bck.jpg");
+	// background-size: auto 200%;
+    // background-clip: text;
+	// -webkit-background-clip: text;
+	// -webkit-text-fill-color: transparent;
+	// animation: dps-kframe 5s linear infinite;
 
-	@keyframes dps-kframe {
-		0% {
-			background-position: center 0;
-		}
-		100% {
-			background-position: center 200%;
-		}
-	}
+	// @keyframes dps-kframe {
+	// 	0% {
+	// 		background-position: center 0;
+	// 	}
+	// 	100% {
+	// 		background-position: center 200%;
+	// 	}
+	// }
+
+    font-family: "Moderat", sans-serif;
+    color: #f5f9ff;
+
 }
 
 .dps-welcome-title {
