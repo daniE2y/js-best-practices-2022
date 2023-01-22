@@ -12,14 +12,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "index.html",
     }),
-    new HtmlWebpackPlugin({
-      filename: "blog.html",
-      template: "blog.html",
-    }),
-    new HtmlWebpackPlugin({
-      filename: "social.html",
-      template: "social.html",
-    }),
   ],
   module: {
     rules: [
