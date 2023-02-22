@@ -5,79 +5,39 @@ import Layout from "../layouts/Layout.astro";
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Separator from '../components/Separator.astro';
+import LittleSeparator from '../components/LittleSeparator.astro';
 
-const pageTitle = "About Me";
-
-const identity = {
-    firstName: "Sarah",
-    country: "Canada",
-    occupation: "Technical Writer",
-    hobbies: ["photography", "birdwatching", "baseball"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-
-const happy = true;
-const finished = false;
-const goal = 3;
 ---
 
-<Layout title={pageTitle}>
+<Layout title="About me - @danisanga">
     
     <Header />
 
+    <Separator />
+
     <main>
-        <body>
-            <h1>My Astro Site</h1>
-            <h1>{pageTitle}</h1>
-            <h2>... and my new Astro site!</h2>
+		<h1>I'm <span class="text-gradient"><i>Dani Sanchez</i></span>, 
+            a Software developer from Spain</h1>
+		
+        <LittleSeparator />
 
-            <p>
-                I am working through Astro's introductory tutorial. This is the
-                second page on my website, and it's the first one I built
-                myself!
-            </p>
+		<section>
+            For the last 5 years, I was programming in 
+            <span class="text-gradient">Java <i>(Spring + backend stuff)</i></span> but 
+            <br/>
+            I don't identify myself with a specific technology or language. That depends on the problem that needs to be solved.
+            <br/><br/>
+            Currently, I'm working in <span class="text-gradient"><i>e2y</i></span> 
+            as a Software developer creating e-commerce sites with <span class="text-gradient"><i>SAP Commerce Cloud</i></span>.
+            <br/><br/>
+            On the personal side, I love food, motorcycles and reading books (especially about data structures, algorithms, design systems and other software stuff).
+            <br/>
+            Feel free to follow me on <b>GitHub</b> or contact me on <b>LinkedIn</b>.
+		</section>
+	</main>
 
-            <p>
-                This site will update as I complete more of the tutorial, so
-                keep checking back and see how my journey is going!
-            </p>
-
-            <p>Here are a few facts about me:</p>
-            <ul>
-                <li>My name is {identity.firstName}.</li>
-                <li>
-                    I live in {identity.country} and I work as a {
-                        identity.occupation
-                    }.
-                </li>
-                {
-                    identity.hobbies.length >= 2 && (
-                        <li>
-                            Two of my hobbies are: {identity.hobbies[0]} and{" "}
-                            {identity.hobbies[1]}
-                        </li>
-                    )
-                }
-            </ul>
-            <p>My skills are:</p>
-            <ul>
-                {skills.map((skill) => <li>{skill}</li>)}
-            </ul>
-
-            {happy && <p>I am happy to be learning Astro!</p>}
-
-            {finished && <p>I finished this tutorial!</p>}
-
-            {
-                goal === 3 ? (
-                    <p>My goal is to finish in 3 days.</p>
-                ) : (
-                    <p>My goal is not 3 days.</p>
-                )
-            }
-        </body>
-    </main>
+    <Separator />
 
     <Footer />
     

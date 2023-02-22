@@ -1,1 +1,11 @@
-/* Add global styles foe the website! Add the following statement in .astro files, import '../styles/global.css'; */
+@font-face {
+    font-family: 'MonoLisaCustom-Medium';
+    src: url('/fonts/MonoLisaCustom-Medium.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+main {
+    font-family: 'MonoLisaCustom-Medium';
+}
