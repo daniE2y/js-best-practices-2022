@@ -1,0 +1,25 @@
+---
+const { platform, url } = Astro.props;
+---
+
+<a class="a-dps" target="_blank" href={url}>{platform}</a>
+
+<style>
+    a {
+        margin: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        max-width: 60ch;
+    }
+    .a-dps {
+        font-family: "MonoLisaCustom-Medium";
+        font-weight: 900;
+        font-size: large;
+        text-decoration: none;
+        color: #222;
+    }
+    .a-dps:hover {
+        background-color: #fdcc82;
+        border-radius: 3rem;
+    }
+</style>
