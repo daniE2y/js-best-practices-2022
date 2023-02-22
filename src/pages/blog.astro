@@ -6,31 +6,59 @@ import Layout from "../layouts/Layout.astro";
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import BlogPost from '../components/BlogPost.astro';
+import Separator from '../components/Separator.astro';
+import LittleSeparator from '../components/LittleSeparator.astro';
 
 const allPosts = await Astro.glob('../pages/posts/*.md');
 ---
 
-<Layout title="@danisanga">
+<Layout title="Blog - @danisanga">
 
     <Header />
 
-    <main>
-        <body>
-            <h1>My Astro Site</h1>
-            <h1>My Astro Learning Blog</h1>
-            <p>This is where I will post about my journey learning Astro.</p>
+    <Separator />
 
+    <main>
+		<h1 class="articles-dps-h1">Articles</h1>
+		
+        <LittleSeparator />
+
+		<section>
+            Tech articles about <span class="text-gradient"><i>Data structures</i></span>, 
+            <span class="text-gradient"><i>Algorithms</i></span> and more 
+            <span class="text-gradient"><i>software stuff</i></span>.  
+            
             <ul>
-                {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+                <!-- TODO - DSG - Wait for real articles... -->
+                <!-- {allPosts.map((post) => <BlogPost 
+                    url={post.url} 
+                    title={post.frontmatter.title} 
+                    pubDate={post.frontmatter.pubDate}/>)} -->
+
+                    <li>Coming soon...</li>
+
             </ul>
-        </body>
-    </main>
+            
+        </section>
+	</main>
+    
+    <Separator />
 
     <Footer />
 
 </Layout>
 
 <style>
+
+    /* TODO - DSG - Remove when articles are ready... */
+    li {
+        padding: 1rem;
+    }
+    .article-dps-a {
+        text-decoration: none;
+        color: #222;
+    }
+
     main {
         margin: auto;
         padding: 6rem;
@@ -41,6 +69,11 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
         font-weight: 800;
         margin: 0;
     }
+
+    .articles-dps-h1 {
+        text-align: center;
+    }
+
     h2 {
         font-size: 2rem;
         font-weight: 800;

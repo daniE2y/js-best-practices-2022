@@ -1,5 +1,26 @@
 ---
-const { url, title } = Astro.props;
+const { url, title, pubDate } = Astro.props;
+
+const dateOptions: object = {
+	year: "numeric",
+	month: "long",
+	day: "numeric",
+};
+
+const formattedPubDate = new Date(pubDate).toLocaleDateString(
+	"en-US",
+	dateOptions
+);
 ---
 
-<li><a href={url}>{title}</a></li>
+<li><a class="article-dps-a" href={url}>{`${title} (${formattedPubDate})`}</a></li>
+
+<style>
+    li {
+        padding: 1rem;
+    }
+    .article-dps-a {
+        text-decoration: none;
+        color: #222;
+    }
+</style>
