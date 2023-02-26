@@ -3,8 +3,12 @@ import Social from "./Social.astro";
 ---
 
 <footer>
-    <Social platform="LinkedIn" url="https://www.linkedin.com/in/danielsanchezgracia/" />
-    <Social platform="GitHub" url="https://github.com/danisanga" />
+    <Social platform="linkedin" 
+            url="https://www.linkedin.com/in/danielsanchezgracia/" 
+            urlSource="/icons/linkedin.svg" />
+    <Social platform="github" 
+            url="https://github.com/danisanga"
+            urlSource="/icons/github.svg" />
 </footer>
 
 <style>
@@ -13,6 +17,6 @@ import Social from "./Social.astro";
         display: flex;
         align-items: center;
         margin: auto;
-		max-width: 60ch;
+		max-width: 30ch;
     }
 </style>
