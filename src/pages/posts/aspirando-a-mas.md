@@ -15,9 +15,9 @@ Como primer artículo en mi blog me gustaría hablar sobre un <b>plan de acción
 
 <b>Plan de acción</b> que decidí poner en práctica por ciertos factores:
 
-Interés por compartir mis pensamientos y/o conocimiento y ¡qué mejor que escribiendo artículos tech!
-Pasión por entender más allá de tirar líneas de código por tirar.
-Ser mejor profesional.
+- Interés por compartir mis pensamientos y/o conocimiento y ¡qué mejor que escribiendo artículos tech!
+- Pasión por entender más allá de tirar líneas de código por tirar.
+- Ser mejor profesional.
 En resumen, este <b>plan de acción</b>, consistirá en seguir dando mi mejor versión en empresa y dedicar tiempo a estudiar los <i class="italic">Fundamentals®️</i> (como a mi me gusta llamar a el estudio de estructuras de datos y algoritmos).
 
 Para ello quisiera compartir mis inicios en el mundillo y entender el porqué de mis aspiraciones.
