@@ -1,15 +1,16 @@
 ---
-const { platform, url } = Astro.props;
+const { platform, url, urlSource } = Astro.props;
 ---
 
-<a class="a-dps" target="_blank" href={url}>{platform}</a>
+<a class="a-dps" target="_blank" href={url}>
+    <img alt={platform} src={urlSource} />
+</a>
 
 <style>
     a {
         margin: auto;
-        padding-left: 2rem;
-        padding-right: 2rem;
         max-width: 60ch;
+        height: 3ch;
     }
     .a-dps {
         font-family: "MonoLisaCustom-Medium";
@@ -21,5 +22,9 @@ const { platform, url } = Astro.props;
     .a-dps:hover {
         background-color: #fdcc82;
         border-radius: 3rem;
+    }
+    img {
+        height: 2rem;
+        width: 2rem;
     }
 </style>

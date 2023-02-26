@@ -12,7 +12,7 @@ import LittleSeparator from '../components/LittleSeparator.astro';
 const allPosts = await Astro.glob('../pages/posts/*.md');
 ---
 
-<Layout title="Blog - @danisanga">
+<Layout title="Articles - @danisanga">
 
     <Header />
 
@@ -29,14 +29,10 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
             <span class="text-gradient"><i>software stuff</i></span>.  
             
             <ul>
-                <!-- TODO - DSG - Wait for real articles... -->
-                <!-- {allPosts.map((post) => <BlogPost 
+                {allPosts.map((post) => <BlogPost 
                     url={post.url} 
                     title={post.frontmatter.title} 
-                    pubDate={post.frontmatter.pubDate}/>)} -->
-
-                    <li>Coming soon...</li>
-
+                    pubDate={post.frontmatter.pubDate}/>)}
             </ul>
             
         </section>
@@ -49,8 +45,6 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 </Layout>
 
 <style>
-
-    /* TODO - DSG - Remove when articles are ready... */
     li {
         padding: 1rem;
     }

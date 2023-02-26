@@ -1,10 +1,16 @@
 ---
+import "../styles/global.css";
+
 import Layout from "./Layout.astro";
+
+import Header from "../components/Header.astro";
+import Separator from "../components/Separator.astro";
+import Footer from "../components/Footer.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title="@danisanga blog posts!">
+<!-- <Layout title="@danisanga blog posts!">
     <h1>{frontmatter.title}</h1>
     <p>Written by {frontmatter.author}</p>
 
@@ -16,4 +22,34 @@ const { frontmatter } = Astro.props;
         ))}
       </div>
     <slot />
+</Layout> -->
+<Layout title="Articles - @danisanga">
+  <Header />
+
+  <Separator />
+
+  <main>
+    <h1>{frontmatter.title}</h1>
+    <p><i>Written by {frontmatter.author}</i></p>
+
+    <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+
+    <slot />
+  </main>
+
+  <Separator />
+
+  <Footer />
 </Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 6rem;
+    max-width: 80ch;
+  }
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+</style>
