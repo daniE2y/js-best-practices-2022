@@ -15,7 +15,7 @@ Actualmente sigo estudiando el libro <i class="italic">“A Common-Sense Guide t
 
 Es un tema básico, lo sé. Pero el autor lo expone para hacerle ver al lector la importancia del algoritmo y la estructura de datos que decide utilizar.
 
-En este artículo me gustaría comentar las diferencias entre <i class="italic">linear search</i> y <i class="italic">binary search</i> y qué ventajas aportan.
+En este artículo me gustaría dar una pequeña introducción a <i class="italic">linear search</i> y <i class="italic">binary search</i> y qué ventajas aportan.
 
 <div class="little-separator-main-dps">
     <hr />
@@ -41,7 +41,7 @@ Primero de todo, comprender las dos estructuras de datos que vamos a mencionar e
 
 <img src="/imgs/article-02/07.png" alt="07" />
 
-Para poder efectuar una búsqueda binaria, es necesario que los elementos de la lista sean únicos y están <b>ordenados</b>.
+Para poder efectuar una <i class="italic">binary search</i>, es necesario que los elementos de la lista sean únicos y están <b>ordenados</b>.
 
 <div class="little-separator-main-dps">
     <hr />
@@ -65,7 +65,7 @@ El sentido común hace que vayamos elemento a elemento y nos preguntemos si es e
 
 Finalmente, en el elemento cuyo índice es 5, encontraremos el número ‘80’. Con esto habremos terminado la búsqueda y el programa podrá proseguir con otras tareas.
 
-Esto en listas con pocos elementos es aceptable, pero si por ejemplo, tenemos 10000 elementos, sería una locura. Tardaríamos que revisar, en el peor de los casos, <b>toda la longitud del array</b>.
+Esto en listas con pocos elementos es aceptable, pero si por ejemplo, tenemos 10000 elementos, sería una locura. Tendríamos que revisar, en el peor de los casos, <b>toda la longitud del array</b>.
 
 En términos de <b>Big O</b>, estaríamos hablando de <b>O(N)</b>, la búsqueda sería tan larga como elementos tuviera la lista. A esta complejidad se le conoce también como <i class="italic">linear time</i>.
 
@@ -81,7 +81,7 @@ Para evitar este problema, existe la <b>búsqueda binaria</b>, o <i class="itali
 
 ## Binary Search
 
-La búsqueda binaria es un algoritmo de búsqueda que consiste en ir descartando conjuntos de valores. Estos al estar ordenados, permiten asegurar que si, por ejemplo, buscamos el elemento de la lista cuyo valor es ‘80’, podamos descartar todos aquellos que sean menores a ‘80’. Insisto, al estar <b>ordenados</b>, es relativamente sencillo.
+La <b>búsqueda binaria</b> es un algoritmo de búsqueda que consiste en ir descartando conjuntos de valores. Estos al estar ordenados, permiten asegurar que si, por ejemplo, buscamos el elemento de la lista cuyo valor es ‘80’, podamos descartar todos aquellos que sean menores a ‘80’. Insisto, al estar <b>ordenados</b>, es relativamente sencillo.
 
 <img src="/imgs/article-02/05.png" alt="05" />
 
@@ -94,7 +94,7 @@ La búsqueda binaria consta de los siguientes pasos:
 3. Volvemos a partir la lista por la mitad. Justo el elemento que marca la mitad tiene como valor ‘23’. El elemento coincide con el valor que estamos buscando. Devolvemos 5, el índice del elemento cuyo valor es ‘23’.
 
 Como se puede apreciar, este algoritmo es increíblemente más rápido que la búsqueda lineal.
-En términos de Big O Notation sería <b>O(log N)</b>, también llamado <i class="italic">logarithmic time</i>.
+En términos de Big O sería <b>O(log N)</b>, también llamado <i class="italic">logarithmic time</i>.
 
 <img src="/imgs/article-02/06.png" alt="06" />
 
@@ -108,28 +108,44 @@ Revisando otra vez en detalle la búsqueda binaria es justamente lo que estamos 
     <hr />
 </div>
 
+# Big O Notation
+
 Más adelante me gustaría indagar en profundidad sobre Big O.
 
 Por ahora, una pequeña comparativa:
 
 <img src="/imgs/article-02/08.png" alt="08" />
 
-Y aquí algunos datos recogidos de diferentes pruebas, en base a un número de elementos y el número de pasos o steps que se realizan:
+Y aquí algunos datos recogidos de diferentes pruebas, en base a un número de elementos y el número de pasos o <i>steps</i> que el algoritmo realiza:
 
-
-| Núm. Elementos 	| O(N) 	| O(log N) 	|
-|----------------	|------	|----------	|
-| 8              	| 8    	| 3        	|
-| 16             	| 16   	| 4        	|
-| 32             	| 32   	| 5        	|
-| 64             	| 64   	| 6        	|
-| 128            	| 128  	| 7        	|
-| 256            	| 256  	| 8        	|
-| 512            	| 512  	| 9        	|
-| 1024           	| 1024 	| 10       	|
+<table>
+    <thead><tr><th>Núm. Elementos</th><th>O(N)</th><th>O(log N)</th></tr></thead
+    ><tbody
+        ><tr><td>8</td><td>8</td><td>3</td></tr><tr
+            ><td>16</td><td>16</td><td>4</td></tr
+        ><tr><td>32</td><td>32</td><td>5</td></tr><tr
+            ><td>64</td><td>64</td><td>6</td></tr
+        ><tr><td>128</td><td>128</td><td>7</td></tr><tr
+            ><td>256</td><td>256</td><td>8</td></tr
+        ><tr><td>512</td><td>512</td><td>9</td></tr><tr
+            ><td>1024</td><td>1024</td><td>10</td></tr
+        ></tbody>
+</table>
 
 
 Mientras <b>O(N)</b> toma tantos pasos como elementos haya, <b>O(log N)</b> solo toma uno más cada vez que los elementos se duplican.
+
+<div class="little-separator-main-dps">
+    <hr />
+    <hr />
+    <hr />
+</div>
+
+Esto es todo por ahora, espero que hayas disfrutado de esta pequeña introducción a ciertos algoritmos de búsqueda y a Big O.
+
+Dejo también la URL a mi repo donde voy publicando los algoritmos, https://github.com/danisanga/java-performance-tests. 
+
+Estoy trabajando en una solución que permita medir la <i class="italic">performance</i> de cada uno de ellos (simplemente a nivel orientativo).
 
 
 <style>
@@ -160,7 +176,9 @@ Mientras <b>O(N)</b> toma tantos pasos como elementos haya, <b>O(log N)</b> solo
         max-width: 100%;
         max-height: 100%;
     }
-    td {
-        border-color: #222;
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 0.5rem;
     }
 </style>
