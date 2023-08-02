@@ -1,0 +1,117 @@
+---
+import "../styles/global.css";
+
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Separator from "../components/Separator.astro";
+import LittleSeparator from "../components/LittleSeparator.astro";
+import Footer from "../components/Footer.astro";
+import Job from "../components/Job.astro";
+---
+
+<Layout title="CV - @danisanga">
+  <Header />
+
+  <Separator />
+
+  <main>
+    <h1><i>Check my tech career!</i></h1>
+
+    <Job
+      company="e2y commerce"
+      job="Software Developer | e-commerce & marketplaces"
+      dates="ene. 2022 - present"
+      description="SAP Hybris Commerce Cloud development.<br/>Working on different projects (B2B & B2C) for multiple customers.<br/>During this time I contributed to the development of different connectors such as Worldpay and Checkout.<br/>Also, I contributed to different e-commerce projects.<br/><br/>In addition, alongside a small team, we researched about the migration of legacy projects to composable storefronts."
+    />
+
+    <Job
+      company="Zinkee"
+      job="Software Developer | Product development"
+      dates="sept. 2022 - dic. 2022"
+      description="At Zinkee, I was developing a SaaS product alongside the engineering team, <br />which allowed for the rapid digitalization of companies; being able to unify all their daily tasks in one place.<br /><br />Working in a product company with a startup environment, I was able to showcaseall my skills as a developer. <br />From the planning of the developments to their deployment in production.<br />Also, we introduce testing to our daily routines to ensure good quality. We started with Playwright and Cucumber for BDD tests and JUnit and Mockito for Java for Java."
+    />
+
+    <div
+      class="additional-info"
+      id="js-additional-info-section"
+      style="display: none;"
+    >
+      <Job
+        company="Hiberus"
+        job="Software Developer | e-commerce & marketplaces"
+        dates="feb. 2019 - oct. 2020"
+        description="SAP Hybris Commerce Cloud development.<br />Working on different projects (B2B & B2C) for multiple customers."
+      />
+
+      <Job
+        company="DXC Thechnology"
+        job="Software Developer | bank apps development"
+        dates="may. 2018 - ene. 2019 | oct. 2020 - ene. 2022"
+        description="Developing banking apps with CaixaBank architecture."
+      />
+
+      <Job
+        company="DareCode | Dare Planet"
+        job="Software Developer | Software Developer Intern"
+        dates="jul. 2017 - may. 2018"
+        description="Developing banking apps with CaixaBank architecture.<br /> QA practices. Test automation with Selenium."
+      />
+
+    </div>
+
+    <div class="dps-additional-info-btn-section">
+      <button id="js-additional-info-btn" class="btn-dps">Show more</button>
+    </div>
+  </main>
+
+  <Separator />
+
+  <Footer />
+</Layout>
+
+<script src="../scripts/additional-info.js"></script>
+
+<style>
+  main {
+    margin: auto;
+    padding: 6rem;
+    max-width: 60ch;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .greeting-dps {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  .dps-additional-info-btn-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-dps {
+    font-family: "MonoLisaCustom-Medium";
+    font-weight: 900;
+    font-size: large;
+    text-decoration: none;
+    color: #222;
+    border-radius: 3rem;
+  }
+  .btn-dps:hover {
+    background-color: #fdcc82;
+    border-radius: 3rem;
+  }
+</style>

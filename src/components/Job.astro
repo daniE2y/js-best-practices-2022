@@ -1,0 +1,26 @@
+---
+import LittleSeparator from "./LittleSeparator.astro";
+
+const { company, job, dates, description } = Astro.props;
+---
+
+<div style="padding-top: 1rem;">
+  <h2 class="text-gradient">{company}</h2>
+  <h3><i>{job}</i></h3>
+  <h4><i>{dates}</i></h4>
+  <p>
+    <Fragment set:html={description}/>
+  </p>
+
+  <LittleSeparator />
+</div>
+
+<style>
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+</style>
