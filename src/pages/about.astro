@@ -39,7 +39,7 @@ import LittleSeparator from '../components/LittleSeparator.astro';
 
             <LittleSeparator />
             
-            <span><u>If you are interested on my profile take a look at my <a class="a-cv-dps" href="/cv/">CV</a>!</u></span>
+            <span><u>If you are interested on my profile take a look at my <a class="a-simple-dps" href="/cv/">CV</a>!</u></span>
 
 		</section>
 	</main>
@@ -98,12 +98,13 @@ import LittleSeparator from '../components/LittleSeparator.astro';
         gap: 1rem;
         padding: 0;
     }
-    .a-cv-dps {
-        font-weight: 600;
-        font-size: large;
-        text-decoration: none;
+    .a-simple-dps {
+        font-family: "MonoLisaCustom-Medium";
+        text-decoration: underline;
         color: #222;
-        background-color: #fdcc82;
+    }
+    .a-simple-dps:hover {
+        background-color: #fcd499;
         border-radius: 3rem;
     }
 </style>
