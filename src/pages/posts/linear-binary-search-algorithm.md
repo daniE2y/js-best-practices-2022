@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 
-title: 'Linear & Binary search'
+title: '🗺️ Linear & Binary search'
 pubDate: 2023-02-26
 description: 'Linear & Binary search'
 author: 'Dani Sanchez'

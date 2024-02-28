@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 
-title: 'Aspirando a más'
+title: '🥇 Aspirando a más'
 pubDate: 2023-01-23
 description: 'Aspirando a más'
 author: 'Dani Sanchez'
