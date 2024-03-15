@@ -6,7 +6,7 @@ pubDate: 2024-03-15
 description: 'Building Bridges: The Key to Effective Teamwork'
 author: 'Dani Sanchez'
 image:
-    url: '' 
+    url: '/imgs/article-04.jpg' 
     alt: ''
 tags: ["astro", "blogging", "learning in public", "teamwork", "soft skills"]
 ---
