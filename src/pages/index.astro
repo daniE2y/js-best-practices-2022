@@ -10,33 +10,33 @@ import LittleSeparator from "../components/LittleSeparator.astro";
 ---
 
 <Layout title="Home - @danisanga">
-	
 	<Header />
 
 	<Separator />
 
 	<main>
+		<div class="ball" id="draggableBall"></div>
 
-		<h1 class="greeting-dps">Hi!</h1>
-		<h1>I'm <span class="text-gradient"><i>Dani Sanchez</i></span></h1>
+		<div>
+			<h1 class="greeting-dps">Hi!</h1>
+			<h2 class="greeting-medium-dps">I'm</h2>
+			<h1 class="greeting-sepecial-dps">Dani Sanchez</h1>
+		</div>
 
-		<h2 class="subtitle-dps">I'm a software developer, <br/>
-			working mostly on <i>back-end</i>.
+		<h2 class="subtitle-dps">
+			Backend Software engineer from Spain.
 		</h2>
-		
+
 		<LittleSeparator />
 
 		<section>
 			<p>
-				<i>There is no good software without good people.</i><br/><br/>
-				Currently working at <span class="text-gradient"><i>e2y</i></span>.
+				Feel free to check my <a class="a-simple-dps" href="/blog/"
+					>tech articles</a
+				> and <a class="a-simple-dps" href="#"
+					>recommended books (comming soon)</a
+				>!
 			</p>
-		</section>
-
-		<LittleSeparator />
-
-		<section>
-			<p> Feel free to check my <a class="a-simple-dps" href="/blog/">tech articles</a> and <a class="a-simple-dps" href="#">recommended books (comming soon)</a>!</p>
 		</section>
 	</main>
 
@@ -47,7 +47,6 @@ import LittleSeparator from "../components/LittleSeparator.astro";
 	<script>
 		import "../scripts/rocket.js";
 	</script>
-
 </Layout>
 
 <style>
@@ -62,12 +61,18 @@ import LittleSeparator from "../components/LittleSeparator.astro";
 		margin: 0;
 	}
 	.greeting-dps {
+		font-size: 6rem;
+	}
+	.greeting-medium-dps {
 		font-size: 4rem;
 	}
 	h2 {
 		font-size: 2rem;
 		font-weight: 800;
 		margin: 0;
+	}
+	.greeting-sepecial-dps {
+		font-size: 5rem;
 	}
 	.subtitle-dps {
 		padding-top: 3rem;
@@ -78,6 +83,14 @@ import LittleSeparator from "../components/LittleSeparator.astro";
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
 		background-position: 0%;
+	}
+	.ball {
+		width: 350px;
+		aspect-ratio: 1;
+		background: #fdcc82;
+		border-radius: 100%;
+		position: absolute;
+		z-index: -1;
 	}
 	.instructions {
 		line-height: 1.6;
@@ -105,12 +118,12 @@ import LittleSeparator from "../components/LittleSeparator.astro";
 		padding: 0;
 	}
 	.a-simple-dps {
-        font-family: "MonoLisaCustom-Medium";
-        text-decoration: underline;
-        color: #222;
-    }
-    .a-simple-dps:hover {
-        background-color: #fcd499;
-        border-radius: 3rem;
-    }
+		font-family: "MonoLisaCustom-Medium";
+		text-decoration: underline;
+		color: #222;
+	}
+	.a-simple-dps:hover {
+		background-color: #fcd499;
+		border-radius: 3rem;
+	}
 </style>
